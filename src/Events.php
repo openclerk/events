@@ -28,12 +28,23 @@ class Events {
 
   /**
    * Register an event handler.
+   * @return data that can be used to unbind the event handler in {@link #unbind()}.
    */
   static function on($event_name, $callback) {
     if (!isset(static::$listeners[$event_name])) {
       static::$listeners[$event_name] = array();
     }
     static::$listeners[$event_name][] = $callback;
+
+    return array('event_name' => $event_name, 'index' => count(static::$listeners[$event_name]));
+  }
+
+  /**
+   * Removes an event handler.
+   * @param $handler event handler information returned in {@link #on()}.
+   */
+  static function unbind($handler) {
+    unset(static::$listeners[$handler['event_name']][$handler['index']]);
   }
 
 }
