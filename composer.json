@@ -1,8 +1,13 @@
 {
   "name": "openclerk/events",
+  "description": "Simple PHP events",
   "autoload": {
     "psr-4": {
-      "Openclerk\\": "src"
+      "Openclerk\\": "src",
+      "Openclerk\\Test\\": "test"
     }
+  },
+  "require-dev": {
+    "soundasleep/component-tests": "dev-master"
   }
 }
