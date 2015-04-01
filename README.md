@@ -1,4 +1,4 @@
-openclerk/events [![Build Status]([![Build Status](https://travis-ci.org/openclerk/events.svg?branch=master)](https://travis-ci.org/openclerk/events))
+openclerk/events [![Build Status](https://travis-ci.org/openclerk/events.svg?branch=master)](https://travis-ci.org/openclerk/events)
 ================
 
 A library for registering event handlers and triggering events, live on [CryptFolio](https://cryptfolio.com/api).
